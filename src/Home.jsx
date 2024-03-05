@@ -76,9 +76,6 @@ const data = [
   },
 ];
 
-
-
-
 const handleScroll = () => {
   let sobreSection = document.getElementById("faixa2");
   sobreSection.scrollIntoView({ behavior: "smooth" });
@@ -111,13 +108,15 @@ function Main() {
             >
               Ler mais
             </button>
-            <a href="./imgs/RelatórioCESAR.pdf" download="RelatórioCESAR" target="_blank">
-              <button
-                type="button"
-                className="font-medium mt-5 border-2 border-[#00c9b0] text-[#171653] rounded text-sm px-4 py-2 text-center mb-2 uppercase"
-              >
-                Relatório de pesquisa
-              </button>
+            <a href="https://drive.google.com/file/d/1hMrAfa3_8-weVN2mR7eHJeLyWueq_5p9/view?usp=sharing" target="_blank">
+              <>
+                <button
+                  type="button"
+                  className="font-medium mt-5 border-2 border-[#00c9b0] text-[#171653] rounded text-sm px-4 py-2 text-center mb-2 uppercase"
+                >
+                  Relatório de pesquisa
+                </button>
+              </>
             </a>
           </div>
         </div>
@@ -242,66 +241,66 @@ function Main() {
           navigation
         >
           {data.map((item) => (
-              <SwiperSlide
-                className="flex flex-col gap-4 border border-gray-400"
-                key={item.id}
-              >
-                {/* <div className=" items-center text-base absolute z-50 bg-black bg-opacity-50 flex w-full justify-center  px-3">
+            <SwiperSlide
+              className="flex flex-col gap-4 border border-gray-400"
+              key={item.id}
+            >
+              {/* <div className=" items-center text-base absolute z-50 bg-black bg-opacity-50 flex w-full justify-center  px-3">
                   <h1 className="text-white text-center">{item.titulo}</h1>
                 </div> */}
-                <iframe
-                  className=" w-full h-full"
-                  src={`https://www.youtube.com/embed/${item.src}?rel=0`}
-                  frameBorder="0"
-                  allowFullScreen
-                ></iframe>
-              </SwiperSlide>
+              <iframe
+                className=" w-full h-full"
+                src={`https://www.youtube.com/embed/${item.src}?rel=0`}
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
       <div className="w-full justify-center pb-10 flex flex-col ">
-      <h1 className="text-3xl w-full flex mmd:ml-2 md:justify-center">
-        Nossos Parceiros
-      </h1>
-      <div className="flex w-full justify-center items-center h-72 mmd:h-full mmd:gap-10 mmd:flex-wrap mmd:mt-5">
-        <EmpComp
-          img={logoUfop}
-          text={"UFOP - Universidade Federal de Ouro Preto"}
-          link={"https://ufop.br/"}
-        />
-        <EmpComp
-          img={logoCnpq}
-          text={
-            "CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico"
-          }
-          link={"https://www.gov.br/cnpq/pt-br"}
-        />
-        <EmpComp
-          img={logoGbd}
-          text={"Rede GBD Brasil"}
-          link={"https://gbdbr.com.br/"}
-        />
+        <h1 className="text-3xl w-full flex mmd:ml-2 md:justify-center">
+          Nossos Parceiros
+        </h1>
+        <div className="flex w-full justify-center items-center h-72 mmd:h-full mmd:gap-10 mmd:flex-wrap mmd:mt-5">
+          <EmpComp
+            img={logoUfop}
+            text={"UFOP - Universidade Federal de Ouro Preto"}
+            link={"https://ufop.br/"}
+          />
+          <EmpComp
+            img={logoCnpq}
+            text={
+              "CNPq - Conselho Nacional de Desenvolvimento Científico e Tecnológico"
+            }
+            link={"https://www.gov.br/cnpq/pt-br"}
+          />
+          <EmpComp
+            img={logoGbd}
+            text={"Rede GBD Brasil"}
+            link={"https://gbdbr.com.br/"}
+          />
+        </div>
+        <div className="flex w-full justify-center items-start h-72 mmd:gap-10 mmd:h-full mmd:flex-wrap mmd:mt-5">
+          <EmpComp
+            img={logoFapemig}
+            text={
+              "FAPEMIG - Fundação de Amparo à Pesquisa do Estado de Minas Gerais"
+            }
+            link={"http://www.fapemig.br/pt/"}
+          />
+          <EmpComp
+            img={logoDecit}
+            text={
+              "DECIT - Departamento de Ciência e Tecnologia/Ministério da Saúde"
+            }
+            link={"https://www.gov.br/saude/pt-br/composicao/sectics/decit"}
+          />
+        </div>
       </div>
-      <div className="flex w-full justify-center items-start h-72 mmd:gap-10 mmd:h-full mmd:flex-wrap mmd:mt-5">
-        <EmpComp
-          img={logoFapemig}
-          text={
-            "FAPEMIG - Fundação de Amparo à Pesquisa do Estado de Minas Gerais"
-          }
-          link={"http://www.fapemig.br/pt/"}
-        />
-        <EmpComp
-          img={logoDecit}
-          text={
-            "DECIT - Departamento de Ciência e Tecnologia/Ministério da Saúde"
-          }
-          link={"https://www.gov.br/saude/pt-br/composicao/sectics/decit"}
-        />
-      </div>
-    </div>
-    
-    <Footer></Footer>
+
+      <Footer></Footer>
     </>
   );
 }
